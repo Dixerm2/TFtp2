@@ -1,0 +1,12 @@
+from numpy import *
+numero_filas = int(input("ingrese el numero de filas"))
+numero_columnas = int(input("ingrese el numero de columnas"))
+matriz = []
+for i in range(numero_filas):
+    ign = int(input("ingrese a matriz[{},{}]".format(i+1,i+1)))
+    matriz.append([ign])
+    for j in range(numero_columnas-1):
+        ign = int(input("ingrese matriz[{},{}]".format(i+1,j+2)))
+        matriz[i].append(ign)    
+print(matriz)
+array(matriz)
