@@ -1,0 +1,35 @@
+from numpy import *
+numero_filas = int(input("ingrese el numero de filas: "))
+numero_columnas = int(input("ingrese el numero de columnas: "))
+matriz = []
+for i in range(numero_filas):
+    j=1
+    ign = int(input("ingrese matriz[{},{}]: ".format(i+1,j)))
+    matriz.append([ign])
+    for j in range(numero_columnas-1):
+        ign = int(input("ingrese matriz[{},{}]: ".format(i+1,j+2)))
+        matriz[i].append(ign)    
+print(matriz)
+Total=sum(matriz)
+mfila=[]
+for p in range(numero_filas):
+    mfila.append(sum(matriz[p]))
+    print (matriz[p])
+print(mfila)
+sumf=0
+for x in range(numero_filas):
+    sumf=sumf+((mfila[x])/Total)*math.log((mfila[x])/Total)
+print(sumf)
+
+a=array(matriz)
+b=a.T
+print(b)
+mcol=[]
+for z in range(numero_columnas):
+    mcol.append(sum(b[z]))
+    print (b[z])
+print(mcol)
+sumc=0
+for x in range(numero_columnas):
+    sumc=sumc+((mcol[x])/Total)*math.log((mcol[x])/Total)
+print(sumc)

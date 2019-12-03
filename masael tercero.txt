@@ -1,0 +1,22 @@
+mensaje ="Introdusca los item de la fila (Escrita 'listo' para salir): "
+item =input(mensaje)
+matrizf=[]
+count=0
+while item != "listo" :
+    count=count+1
+    matrizf.append(item)
+    item =input(mensaje)
+
+print(matrizf)
+print(count)
+
+mensj ="Introdusca los item de la columna (Escrita 'listo' para salir): "
+itemc =input(mensj)
+matrizc=[]
+count2=0
+while itemc != "listo" :
+    count2=count2+1
+    matrizc.append(itemc)
+    itemc =input(mensj)
+
+print(matrizc)
